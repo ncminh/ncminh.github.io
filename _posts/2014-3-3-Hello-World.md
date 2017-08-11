@@ -12,12 +12,10 @@ The easiest way to make your first post is to edit this one. Go into /_posts/ an
 Test the syntax highlight:
 
 ```js
-
 function testfunc(a, b) {
-	if (a === b) {
-		return true;
-	}
-	return false;
+  if (a === b) {
+    return true;
+  }
+  return false;
 }
-
 ```
