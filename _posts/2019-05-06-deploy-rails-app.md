@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploy a rails application on Ubuntu
+title: Deploy a rails application on Ubuntu 18.4
 ---
 
 The stack for deploying a rails app:
