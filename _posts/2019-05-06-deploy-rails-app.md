@@ -39,7 +39,13 @@ START: Login to the server via SSH with root permission. (Not best practice)
 
 7. Export the PATH: `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile`
 
-8. Add this line: `eval "$(rbenv init -)"` into **~/.bash_profile**  `vi ~/.bash_profile` `echo 'eval "$(rbenv init -)"' >> ~/.bash_profile`
+8. Add this line: `eval "$(rbenv init -)"` into **~/.bash_profile** 
+
+   ​	 `vi ~/.bash_profile` 
+
+   ​	`echo 'eval "$(rbenv init -)"' >> ~/.bash_profile`
+
+   ​	`source ~/.bash_profile`
 
 9. Clone Ruby Build from Github: `git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build`
 
