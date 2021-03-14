@@ -6,12 +6,12 @@ title: Deploy a rails application on Ubuntu 18.4
 The stack for deploying a rails app:
 1. Nginx
 2. Unicorn
-3. Postgresql DB ` sudo apt-get install -y postgresql postgresql-contrib`
+3. Postgresql DB `sudo apt-get install -y postgresql postgresql-contrib`
 4. Nodejs + Webpack
 
 Rails version 6.2
 Ruby version 2.6.5
-RBENV.
+RBENV ( Ruby Enviroment )
 
 Generate SSH key: `ssh-keygen -t rsa -b 4096 -C "yourmail@example.com"`
 
@@ -69,7 +69,7 @@ START: Login to the server via SSH with root permission. (Not best practice)
 
 16. Config NGINX: remove default site, add symlink to project nginx.conf file.
 
-    `cd /etc/nginx/sites-enabled/` & `rm default` or `rm /etc/nginx/sites-enabled/default`
+    `sudo rm /etc/nginx/sites-enabled/default`
 
     `sudo ln -s /home/deployer/[APP_NAME]/current/config/nginx.conf /etc/nginx/sites-enabled/[APP_NAME]`
 
@@ -81,8 +81,8 @@ START: Login to the server via SSH with root permission. (Not best practice)
 
     `sudo vi /etc/sudoers.d/deployer`
 
-    deployer        ALL=(ALL:ALL) ALL
-    deployer        ALL=NOPASSWD: /home/deployer/[APP_NAME]/current/config/unicorn_init.sh
+    `deployer        ALL=(ALL:ALL) ALL`
+    `deployer        ALL=NOPASSWD: /home/deployer/[APP_NAME]/current/config/unicorn_init.sh`
 
 20. Config unicorn start each time server restart: `sudo update-rc.d unicorn_[APP_NAME] defaults`
 
