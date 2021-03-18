@@ -1,3 +1,8 @@
+---
+layout: post
+title: Config SSL for a site with Let's Encrypt
+---
+
 Config SSL with Let's Encrypt for production server with a rails app
 
 1. SSH to production server with app user ( deployer )
