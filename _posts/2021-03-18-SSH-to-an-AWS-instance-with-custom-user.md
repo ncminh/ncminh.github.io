@@ -51,3 +51,5 @@ id_rsa.pub can be found here in windows:
 `C:\Users\[your-user-name]\.ssh`
 
 and the format will be like `ssh-rsa xxxxxx-very-long-string-here`
+
+![_config.yml]({{ site.baseurl }}/images/_ssh_folder.png)
