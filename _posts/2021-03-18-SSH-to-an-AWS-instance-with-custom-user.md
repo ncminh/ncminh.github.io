@@ -1,11 +1,11 @@
 ---
 layout: post
-title: SSH to an AWS instance with custom added user on Ubuntu 18
+title: SSH to an AWS EC2 instance with custom-added user on Ubuntu 18
 ---
 
 ## Add a new user
 
-First of all create a user called joe under Ubuntu group.
+First of all log in to your EC2 instance and create a user called `deployer`under Ubuntu group.
 
 `sudo adduser deployer --ingroup ubuntu`
 
