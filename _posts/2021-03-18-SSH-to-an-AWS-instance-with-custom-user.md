@@ -55,4 +55,4 @@ $ vi authorized_keys
 
 id_rsa.pub can be found here in windows:
 
-<img src="D:\Writing\ncminh.github.io\images\_ssh_folder.PNG" alt="SSH " style="zoom:50%;" />
+![_config.yml]({{ site.baseurl }}/images/_ssh_folder.PNG)
