@@ -19,40 +19,35 @@ Switch the terminal session with the new user account
 
 Type the password
 
+We'll get a path like: `deployer@ip-X-X-X-X:~/.ssh$` with X.X.X.X is default by AWS
+
 ## Create .ssh directory
 
 Create a directory named .ssh in the home folder:
 
-```
-$ mkdir .ssh
-```
 
-We'll get a path like: `deployer@ip-X-X-X-X:~/.ssh$` with X.X.X.X is default by AWS
+`deployer@ip-X-X-X-X:~$ mkdir .ssh`
 
 ## Give permission
 
 Give permission to the .ssh folder
 
-```
-deployer@ip-X-X-X-X:~/.ssh$ chmod 700 .ssh
-```
+`deployer@ip-X-X-X-X:~$ chmod 700 .ssh`
 
 ## Create authorized_keys file
 
 Create authorized_keys file inside .ssh directory
 
-```
-$ touch authorized_keys
-```
+`deployer@ip-X-X-X-X:~$ cd .ssh && touch authorized_keys`
 
 ## Add user’s public key
 
 Add the public key id_rsa.pub to the authorized_keys file
 
-```
-$ vi authorized_keys
-```
+`deployer@ip-X-X-X-X:~/.ssh$ vi authorized_keys`
 
 id_rsa.pub can be found here in windows:
 
-![_config.yml]({{ site.baseurl }}/images/_ssh_folder.png)
+`C:\Users\[your-user-name]\.ssh`
+
+and the format will be like `ssh-rsa xxxxxx-very-long-string-here`
