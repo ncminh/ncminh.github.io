@@ -52,4 +52,4 @@ id_rsa.pub can be found here in windows:
 
 and the format will be like `ssh-rsa xxxxxx-very-long-string-here`
 
-![_config.yml]({{ site.baseurl }}/images/_ssh_folder.png)
+![_config.yml]({{ site.baseurl }}/images/ssh_rsa_location_win.png)
