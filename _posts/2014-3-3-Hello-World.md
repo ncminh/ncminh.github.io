@@ -1,6 +1,6 @@
 ---
 layout: post
-title: You're up and running!
+title: Useful Powershell scripts for AD
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
@@ -21,4 +21,39 @@ function testfunc(a, b) {
   return false;
 }
 ```
+
+
+
+Export all users with selected properties to CSV file
+
+```powershell
+Get-ADUser -filter * -properties * | select-object name,emailaddress, enabled, department, passwordlastset | export-csv -path c:\userexport20210512_1518.csv
+```
+
+
+
+** Disable/Enable a list of users from csv file:
+
+```powershell
+# $name = "test02"
+
+$namelist = Import-Csv C:\names.csv
+
+# foreach($name in $namelist) { Disable-ADAccount -Identity $name }
+# foreach($name in $namelist) { Write-Output $name.Name }
+
+foreach($user in $namelist) { Disable-ADAccount -Identity $user.Name }
+
+######################################################################
+
+
+$namelist = Import-Csv C:\names.csv
+
+# foreach($name in $namelist) { Disable-ADAccount -Identity $name }
+
+# foreach($name in $namelist) { Write-Output $name.Name }
+foreach($user in $namelist) { Enable-ADAccount -Identity $user.Name }
+```
+
+
 
