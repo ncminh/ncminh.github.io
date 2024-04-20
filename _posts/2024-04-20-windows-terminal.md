@@ -1,3 +1,7 @@
+---
+layout: post
+title: Windows Terminal + Format
+---
 # Windows Terminal Notes
 
 (Credit : https://gist.github.com/dahlsailrunner/ec99e195b2a4903748a74df64a1f1a94)
